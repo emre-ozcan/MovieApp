@@ -21,7 +21,7 @@ struct DownloadImageView: View {
         if let data = self.imageDownloaderViewModel.downloadedImage{
             return Image(uiImage: UIImage(data: data)!).resizable().frame(width: 100, height: 150).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 3))
         }else{
-            return Image("default-placeholder").resizable().frame(width: 100, height: 150)
+            return Image("default-placeholder").resizable().frame(width: 100, height: 150).cornerRadius(10).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue, lineWidth: 3))
         }
     }
 }

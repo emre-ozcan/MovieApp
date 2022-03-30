@@ -9,21 +9,33 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var homeViewModel: HomeViewModel
+    @State var searchString = ""
     
     init(){
         self.homeViewModel = HomeViewModel()
-        self.homeViewModel.getSearchMovies(searchString: "batman")
+        
     }
     
     var body: some View {
-        List(homeViewModel.movies, id: \.imdbId){ movie in
-            HStack{
-                DownloadImageView(imageUrl: movie.image)
-                VStack(alignment: .leading){
-                    Text(movie.title).font(.title3).foregroundColor(.blue)
-                    Text(movie.year).foregroundColor(.gray)
-                }.padding()
-            }.padding()
+        NavigationView{
+            VStack{
+                TextField("Search Here...", text: $searchString, onCommit: {
+                    self.homeViewModel.getSearchMovies(searchString: searchString.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed) ?? searchString)
+                }).padding().textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                List(homeViewModel.movies, id: \.imdbId){ movie in
+                    NavigationLink(destination: DetailView(imdbId: movie.imdbId)) {
+                        HStack{
+                            DownloadImageView(imageUrl: movie.image)
+                            VStack(alignment: .leading){
+                                Text(movie.title).font(.title3).foregroundColor(.blue)
+                                Text(movie.year).foregroundColor(.gray)
+                            }.padding()
+                        }.padding()
+                    }
+                }
+            }
+            .navigationTitle(Text("Movies"))
         }
     }
 }
