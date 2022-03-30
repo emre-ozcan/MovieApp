@@ -17,7 +17,13 @@ struct HomeView: View {
     
     var body: some View {
         List(homeViewModel.movies, id: \.imdbId){ movie in
-            Text(movie.title)
+            HStack{
+                DownloadImageView(imageUrl: movie.image)
+                VStack(alignment: .leading){
+                    Text(movie.title).font(.title3).foregroundColor(.blue)
+                    Text(movie.year).foregroundColor(.gray)
+                }.padding()
+            }.padding()
         }
     }
 }

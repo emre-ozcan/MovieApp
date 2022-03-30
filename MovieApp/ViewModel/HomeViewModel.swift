@@ -45,4 +45,8 @@ struct HViewModel{
     var imdbId: String{
         movie.imdbId
     }
+    
+    var year: String{
+        movie.year
+    }
 }
