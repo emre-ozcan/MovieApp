@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C15534627F472B000FC432E /* MovieAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C15534527F472B000FC432E /* MovieAppApp.swift */; };
+		9C15534627F472B000FC432E /* MovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C15534527F472B000FC432E /* MovieApp.swift */; };
 		9C15534827F472B000FC432E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C15534727F472B000FC432E /* ContentView.swift */; };
 		9C15534A27F472B200FC432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C15534927F472B200FC432E /* Assets.xcassets */; };
 		9C15534D27F472B200FC432E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C15534C27F472B200FC432E /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		9C15534227F472B000FC432E /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C15534527F472B000FC432E /* MovieAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppApp.swift; sourceTree = "<group>"; };
+		9C15534527F472B000FC432E /* MovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApp.swift; sourceTree = "<group>"; };
 		9C15534727F472B000FC432E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9C15534927F472B200FC432E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C15534C27F472B200FC432E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,8 +51,10 @@
 		9C15534427F472B000FC432E /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				9C15534527F472B000FC432E /* MovieAppApp.swift */,
-				9C15534727F472B000FC432E /* ContentView.swift */,
+				9C15535327F473B200FC432E /* App */,
+				9C15535427F473E100FC432E /* Model */,
+				9C15535527F473E700FC432E /* View */,
+				9C15535627F473EC00FC432E /* ViewModel */,
 				9C15534927F472B200FC432E /* Assets.xcassets */,
 				9C15534B27F472B200FC432E /* Preview Content */,
 			);
@@ -65,6 +67,36 @@
 				9C15534C27F472B200FC432E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9C15535327F473B200FC432E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C15534527F472B000FC432E /* MovieApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C15535427F473E100FC432E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C15535527F473E700FC432E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C15534727F472B000FC432E /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C15535627F473EC00FC432E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C15534827F472B000FC432E /* ContentView.swift in Sources */,
-				9C15534627F472B000FC432E /* MovieAppApp.swift in Sources */,
+				9C15534627F472B000FC432E /* MovieApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
