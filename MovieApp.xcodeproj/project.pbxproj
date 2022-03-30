@@ -12,6 +12,8 @@
 		9C15534A27F472B200FC432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C15534927F472B200FC432E /* Assets.xcassets */; };
 		9C15534D27F472B200FC432E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C15534C27F472B200FC432E /* Preview Assets.xcassets */; };
 		9C15535A27F474A500FC432E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C15535927F474A500FC432E /* Movie.swift */; };
+		9C15535D27F4775B00FC432E /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C15535C27F4775B00FC432E /* HttpClient.swift */; };
+		9C15536027F4796000FC432E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C15535F27F4796000FC432E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		9C15534927F472B200FC432E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C15534C27F472B200FC432E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C15535927F474A500FC432E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		9C15535C27F4775B00FC432E /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		9C15535F27F4796000FC432E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C15536127F47E8400FC432E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +58,13 @@
 		9C15534427F472B000FC432E /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C15536127F47E8400FC432E /* Info.plist */,
+				9C15535B27F4774800FC432E /* Service */,
 				9C15535327F473B200FC432E /* App */,
 				9C15535427F473E100FC432E /* Model */,
 				9C15535527F473E700FC432E /* View */,
 				9C15535627F473EC00FC432E /* ViewModel */,
+				9C15535E27F4795400FC432E /* Util */,
 				9C15534927F472B200FC432E /* Assets.xcassets */,
 				9C15534B27F472B200FC432E /* Preview Content */,
 			);
@@ -100,6 +108,22 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C15535B27F4774800FC432E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9C15535C27F4775B00FC432E /* HttpClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9C15535E27F4795400FC432E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9C15535F27F4796000FC432E /* Constants.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C15536027F4796000FC432E /* Constants.swift in Sources */,
 				9C15534827F472B000FC432E /* ContentView.swift in Sources */,
 				9C15534627F472B000FC432E /* MovieApp.swift in Sources */,
+				9C15535D27F4775B00FC432E /* HttpClient.swift in Sources */,
 				9C15535A27F474A500FC432E /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +332,7 @@
 				DEVELOPMENT_TEAM = D98LC9CJD6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,6 +362,7 @@
 				DEVELOPMENT_TEAM = D98LC9CJD6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Button(action: {
+            HttpClient().getSearchMovies(search: "batman") { (response) in
+                switch response{
+                case .success(let movieList): print(movieList)
+                case .failure(let error): print(error)
+                }
+            }
+        }, label: {
+            Text("Request Call")
+        })
     }
 }
 
