@@ -20,6 +20,11 @@ struct MovieDetail: Codable{
     let metascore : String
     let imdbRating : String
     let imdbId : String
+    let runtime : String
+    let country: String
+    let rated: String
+    let language: String
+    let released: String
     
     private enum CodingKeys : String, CodingKey {
         case title = "Title"
@@ -34,5 +39,10 @@ struct MovieDetail: Codable{
         case metascore = "Metascore"
         case imdbRating = "imdbRating"
         case imdbId = "imdbID"
+        case runtime = "Runtime"
+        case country = "Country"
+        case rated = "Rated"
+        case language = "Language"
+        case released = "Released"
     }
 }

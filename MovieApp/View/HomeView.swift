@@ -13,6 +13,7 @@ struct HomeView: View {
     
     init(){
         self.homeViewModel = HomeViewModel()
+        homeViewModel.getSearchMovies(searchString: "batman")
         
     }
     
@@ -26,7 +27,7 @@ struct HomeView: View {
                 List(homeViewModel.movies, id: \.imdbId){ movie in
                     NavigationLink(destination: DetailView(imdbId: movie.imdbId)) {
                         HStack{
-                            DownloadImageView(imageUrl: movie.image)
+                            DownloadImageView(imageUrl: movie.image).frame(width: 100, height: 150)
                             VStack(alignment: .leading){
                                 Text(movie.title).font(.title3).foregroundColor(.blue)
                                 Text(movie.year).foregroundColor(.gray)

@@ -11,14 +11,17 @@ import SwiftUI
 class DetailViewModel: ObservableObject{
     
     @Published var movieDetails : MDViewModel?
+    @Published var isLoading = true
     
     let httpClient = HttpClient()
     
     func getMovieDetails(imdbId: String){
+        self.isLoading = true
         httpClient.getMovieDetails(imdbId: imdbId) { (result) in
             switch result {
             case.failure(let error): print(error)
             case.success(let movieDetail): DispatchQueue.main.async {
+                self.isLoading = false
                 self.movieDetails = MDViewModel(detail: movieDetail)
                 }
             }
@@ -62,4 +65,35 @@ struct MDViewModel {
         detail.plot
     }
     
+    var imdbRate : String{
+        detail.imdbRating
+    }
+    
+    var genre: String{
+        detail.genre
+    }
+    
+    var runtime: String{
+        detail.runtime
+    }
+    
+    var country: String{
+        detail.country
+    }
+    
+    var rated: String{
+        detail.rated
+    }
+    
+    var language: String{
+        detail.language
+    }
+    
+    var released: String{
+        detail.released
+    }
+    
+    var actors: String{
+        detail.actors
+    }
 }
